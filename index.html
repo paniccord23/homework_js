@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery.js" charset="utf-8"></script>
+
+    <style>
+      * {
+        transition: all 0.3s ease;
+      }
+      html, body {
+        width: 100%;
+        heigth: 100%;
+        margin: 0;
+        background-color: #000;
+      }
+      div {
+        position: absolute;
+      }
+    </style>
+
+    <script type="text/javascript">
+      $(function() {
+        $("div").each(function(index) {
+          let width  = 400
+          let height = 400
+          let x      = 400
+          let y      = 200
+
+          $(this).css({
+            "top": y + "px",
+            "left": x + "px",
+            "width":  width + "px",
+            "height": height + "px",
+
+          })
+          $(this).on("mouseenter", function() {
+            let width  = Math.floor(Math.random() * 1000) + 500
+            let height = Math.floor(Math.random() * 1000) +500
+            let x      = Math.floor(Math.random() * 800) +500
+            let y      = Math.floor(Math.random() * 300) +300
+            $(this).css({
+              "top": y + "px",
+              "left": x + "px",
+              "width":  width + "px",
+              "height": height + "px",
+            })
+          })
+        })
+      })
+    </script>
+
+  </head>
+  <body>
+    <div><img src="img/eyes.svg"></div>
+    <div><img src="img/z.svg"></div>
+    <div><img src="img/eyes.svg"></div>
+    <div><img src="img/0.svg"></div>
+    <div><img src="img/eyes.svg"></div>
+    <div><img src="img/o.svg"></div>
+    <div><img src="img/eyes.svg"></div>
+    <div><img src="img/p.svg"></div>
+    <div><img src="img/a.svg"></div>
+    <div><img src="img/r.svg"></div>
+    <div><img src="img/k.svg"></div>
+    <div><img src="img/eyes.svg"></div>
+  </body>
+</html>
